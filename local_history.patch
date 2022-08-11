@@ -1,0 +1,66 @@
+Index: app/src/main/java/com/example/washingpanda/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/washingpanda/MainActivity.java b/app/src/main/java/com/example/washingpanda/MainActivity.java
+--- a/app/src/main/java/com/example/washingpanda/MainActivity.java	
++++ b/app/src/main/java/com/example/washingpanda/MainActivity.java	(date 1660130462072)
+@@ -28,9 +28,9 @@
+ 
+         webView = findViewById(R.id.webView);
+         webView.setWebViewClient(client);
+-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+-       Objects.requireNonNull(getSupportActionBar()).hide();
++        requestWindowFeature(Window.FEATURE_NO_TITLE);
++       // this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
++      //  Objects.requireNonNull(getSupportActionBar()).hide();
+ 
+         webView.getSettings().setJavaScriptEnabled(true);
+ 
+Index: app/build/generated/source/buildConfig/debug/com/example/washingpanda/BuildConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/generated/source/buildConfig/debug/com/example/washingpanda/BuildConfig.java b/app/build/generated/source/buildConfig/debug/com/example/washingpanda/BuildConfig.java
+--- a/app/build/generated/source/buildConfig/debug/com/example/washingpanda/BuildConfig.java	
++++ b/app/build/generated/source/buildConfig/debug/com/example/washingpanda/BuildConfig.java	(date 1660127937144)
+@@ -1,0 +1,12 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.example.washingpanda;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String APPLICATION_ID = "com.deepanshu.washingpanda";
++  public static final String BUILD_TYPE = "debug";
++  public static final int VERSION_CODE = 1;
++  public static final String VERSION_NAME = "1.0";
++}
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	
++++ b/app/build.gradle	(date 1660129888796)
+@@ -8,7 +8,7 @@
+     defaultConfig {
+         applicationId "com.deepanshu.washingpanda"
+         minSdk 21
+-        targetSdk 32
++        targetSdk 28
+         versionCode 1
+         versionName "1.0"
+ 
+@@ -35,4 +35,5 @@
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
++    implementation 'com.android.support:customtabs:28.0.0'
+ }
+\ No newline at end of file
